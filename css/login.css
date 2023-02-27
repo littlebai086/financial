@@ -1,0 +1,36 @@
+#hander{
+	position:absolute;/*絕對位子*/
+	top: 0px;
+	left: 0px;
+}
+
+#left{
+	position:absolute; 
+	width: 150px;
+	top: 10px;
+	left: 0px;
+	border-style:ridge;
+	border-color:#CCFFFF;
+	
+}
+/* #body{
+
+	width: 900px;
+	height: 700px;
+	border-style:ridge;
+	border-color:#CCFFFF;
+} */
+#main{
+	position:absolute;
+	background: #fff0d5;
+	top: 10px;
+	left: 180px;
+	border-style:solid;
+	border-color:#CCFFFF;
+	width: 800px;
+	height: 90%;
+}
+/*
+ . 同時套用數個 class
+ # ID 的宣告法
+*/

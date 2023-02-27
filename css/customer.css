@@ -1,0 +1,29 @@
+.table{
+	width: 90%;
+}
+.table2{
+	width: 97%;
+}
+.table3{
+	width: 650px;
+}
+.td_th{
+	background-color: #DFF8FC;
+	font-weight: bold;
+}
+.td_a{
+	border-left-style:solid;
+	border-color:#e6e6fa
+}
+.td_c{
+	width: 200px;
+}
+.tr_a{
+	color: blue;
+}
+
+
+/*
+ . 同時套用數個 class
+ # ID 的宣告法
+*/

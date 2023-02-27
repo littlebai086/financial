@@ -1,0 +1,398 @@
+     .information{
+        position:relative;
+      }
+      .information:hover::before{
+        position: absolute;
+        min-width:60px;
+        top: -25px;
+        left: -25px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '詳細資訊';
+      }
+     .update{
+        position:relative;
+      }
+      .update:hover::before{
+        position: absolute;
+        min-width:35px;
+        top: -25px;
+        left: 10px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '修改';
+      }
+     .open_case{
+        position:relative;
+      }
+      .open_case:hover::before{
+        position: absolute;
+        min-width:35px;
+        top: -25px;
+        left: 10px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '開檔';
+      }
+     .close_case{
+        position:relative;
+      }
+      .close_case:hover::before{
+        position: absolute;
+        min-width:35px;
+        top: -25px;
+        left: 10px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '關檔';
+      }
+     .merge{
+        position:relative;
+      }
+      .merge:hover::before{
+        position: absolute;
+        min-width:35px;
+        top: -25px;
+        left: 10px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '合併';
+      }
+     .reply{
+        position:relative;
+      }
+      .reply:hover::before{
+        position: absolute;
+        min-width:70px;
+        top: -25px;
+        left: 10px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '還原未刪除';
+      }
+     .trash{
+        position:relative;
+      }
+      .trash:hover::before{
+        position: absolute;
+        min-width:35px;
+        top: -25px;
+        left: 10px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '刪除';
+      }
+      .record{
+        position:relative;
+      }
+      .record:hover::before{
+        position: absolute;
+        min-width:60px;
+        top: -25px;
+        right: 0px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '紀錄清單';
+      }
+     .cancel{
+        position:relative;
+      }
+      .cancel:hover::before{
+        position: absolute;
+        min-width:35px;
+        top: -25px;
+        left: 5px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '取消';
+      }
+     .add_blacklist{
+        position:relative;
+      }
+      .add_blacklist:hover::before{
+        position: absolute;
+        min-width:70px;
+        top: -25px;
+        left: -25px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '加入黑名單';
+      }
+     .remove_blacklist{
+        position:relative;
+      }
+      .remove_blacklist:hover::before{
+        position: absolute;
+        min-width:70px;
+        top: -25px;
+        left: -25px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '移除黑名單';
+      }
+     .recieve{
+        position:relative;
+      }
+      .recieve:hover::before{
+        position: absolute;
+        min-width:80px;
+        top: -25px;
+        right: 0px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: 'DP審核確認';
+      }
+     .provide_so{
+        position:relative;
+      }
+      .provide_so:hover::before{
+        position: absolute;
+        min-width:90px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '等待提供S/O';
+      }
+
+      .document_check{
+        position:relative;
+      }
+      .document_check:hover::before{
+        position: absolute;
+        min-width:90px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '等待提單核對';
+      }
+
+      .collection{
+        position:relative;
+      }
+      .collection:hover::before{
+        position: absolute;
+        min-width:60px;
+        top: -25px;
+        right: 0px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '等待收款';
+      }
+      .case_closed{
+        position:relative;
+      }
+      .case_closed:hover::before{
+        position: absolute;
+        min-width:60px;
+        top: -25px;
+        right: 0px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '訂艙結案';
+      }
+
+      .provide_so_date{
+        position:relative;
+      }
+      .provide_so_date:hover::before{
+        position: absolute;
+        min-width:110px;
+        top: -25px;
+        right: 0px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '填寫提供S/O日期';
+      }
+      .document_check_date{
+        position:relative;
+      }
+      .document_check_date:hover::before{
+        position: absolute;
+        min-width:120px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '提供提單及帳單日期';
+      }
+      .collection_date{
+        position:relative;
+      }
+      .collection_date:hover::before{
+        position: absolute;
+        min-width:90px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '填寫收款日期';
+      }
+
+      .provide_so_reply{
+        position:relative;
+      }
+      .provide_so_reply:hover::before{
+        position: absolute;
+        min-width:110px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '回復等待提供S/O';
+      }
+      .document_check_reply{
+        position:relative;
+      }
+      .document_check_reply:hover::before{
+        position: absolute;
+        min-width:110px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '回復等待核對';
+      }
+      .collection_reply{
+        position:relative;
+      }
+      .collection_reply:hover::before{
+        position: absolute;
+        min-width:90px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '回復等待收款';
+      }
+
+      .cut_off_date{
+        position:relative;
+      }
+      .cut_off_date:hover::before{
+        position: absolute;
+        min-width:70px;
+        top: -25px;
+        right: 0px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '修改結關日';
+      }
+
+      .onboard_date{
+        position:relative;
+      }
+      .onboard_date:hover::before{
+        position: absolute;
+        min-width:70px;
+        top: -25px;
+        right: 0px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '修改開航日';
+      }
+
+      .provide_so_pending{
+        position:relative;
+      }
+      .provide_so_pending:hover::before{
+        position: absolute;
+        min-width:80px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '是否完成S/O';
+      }
+
+      .document_check_pending{
+        position:relative;
+      }
+      .document_check_pending:hover::before{
+        position: absolute;
+        min-width:90px;
+        top: -25px;
+        right: -40px;
+        color: #fff;
+        font-size: .6em;
+        background: #346e7a;
+        padding: 5px;
+        border-radius: 5px;
+        content: '是否完成提單及帳單';
+      }
