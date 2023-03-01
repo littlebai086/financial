@@ -12,7 +12,7 @@ require_once("../../controllers/CommonSqlController.php");
 require_once("../../controllers/DocumentFileController.php");
 list($result,$message)=getStaffStatePriorityReturn(false,3,false,true);
 if(!$result){
-  echo QATransportStaffPageHeadDecideErrorImportHtml("測試財務部作業系統",true);
+  echo TESTransportStaffPageHeadDecideErrorImportHtml("測試財務部作業系統",true);
   echo PopupStaticWidowHref("測試財務部作業系統",$message,"../StaffIndex.php",true,"StaffPriorityMessage");
   exit;
 }
@@ -36,7 +36,7 @@ foreach ($fields as $field){
   }
 }
 if(!getDocumentTypeDepartmentPriority($search_fields["document_type_id"],$_SESSION['staff_id'])){
-  echo QATransportStaffPageHeadDecideErrorImportHtml("測試財務部作業系統",true);
+  echo TESTransportStaffPageHeadDecideErrorImportHtml("測試財務部作業系統",true);
   echo PopupStaticWidowHref("測試財務部作業系統","無此權限查看上傳檔案類別","../StaffIndex.php",true,"StaffPriorityMessage");
   exit;
 }
@@ -46,7 +46,7 @@ $document_type_array=getDocumentTypeId($search_fields["document_type_id"]);
 <html lang="en">
   <head>
 <?php 
-  echo QATransportStaffCommonHtmlHead("測試財務部作業系統",true);
+  echo TESTransportStaffCommonHtmlHead("測試財務部作業系統",true);
 ?>
    </head>
 <script type="text/javascript" language="javascript">
@@ -64,7 +64,7 @@ $(document).ready(function(){
 </script>
   <body class="text-center">
 <?php
-  list($result,$html)=QATransportStaffHeader(true);
+  list($result,$html)=TESTransportStaffHeader(true);
   echo $html;
   if(!$result){exit;}
   echo PopupWidowScriptHiddenButton(false,false,"DocumentDel");
@@ -147,6 +147,6 @@ $(document).ready(function(){
   echo $table;
   ?>
 </table>
-  <?php echo QATransportStaffFooter();?>
+  <?php echo TESTransportStaffFooter();?>
 </body>
 </html>

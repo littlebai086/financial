@@ -24,7 +24,7 @@ function getBoostrapBlundleJsImportEnd(){
  *
  * @return string
  */
-function QATransportStaffCommonHtmlHead($title,$parent_link=true,$navbar_top_fixed=true){
+function TESTransportStaffCommonHtmlHead($title,$parent_link=true,$navbar_top_fixed=true){
     $navbar_result="";
     if ($parent_link){
         $parent_href="../../";
@@ -37,7 +37,7 @@ function QATransportStaffCommonHtmlHead($title,$parent_link=true,$navbar_top_fix
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <META NAME='Author' CONTENT='測試股份有限公司'>
     <META NAME='Copyright' CONTENT='本網頁著作權屬測試股份有限公司所有'>
-    <LINK rev='made' href='mailto:jack@qatransport.com'>
+    <LINK rev='made' href='mailto:jack@TESTransport.com'>
     <link rev='made' href='http://www.test.com.tw'>
     <title>".$title."</title>
     ".$navbar_result."
@@ -63,7 +63,7 @@ function QATransportStaffCommonHtmlHead($title,$parent_link=true,$navbar_top_fix
  *
  * @return array(boolean,string)
  */
-function QATransportStaffHeader($parent_link){
+function TESTransportStaffHeader($parent_link){
     $msg="";
     if ($parent_link){
         $parent_href="../../";
@@ -88,7 +88,7 @@ function QATransportStaffHeader($parent_link){
     $msg.="
 <nav class='navbar navbar-expand-lg navbar-dark navbar-static-top bg-dark '>
   <div class='container-fluid bg-dark'>
-     <img src='".$parent_href."/assets/brand/qat_log.png' width='150' height='100' class='me-3' alt='Bootstrap'>
+     <img src='".$parent_href."/assets/brand/TEST_log.png' width='150' height='100' class='me-3' alt='Bootstrap'>
       <a class='navbar-brand' >".$staff_array['extension']." ".ucfirst(strtolower($staff_array['ename']))." ".ucfirst(strtolower($staff_array['elastname']))."</a>
     <button class='navbar-toggler p-0 border-0' type='button' data-bs-toggle='offcanvas' aria-label='Toggle navigation'>
     </button>
@@ -115,7 +115,7 @@ return array(true,$msg);
  *
  * @return string
  */
-function QATransportStaffFooter(){
+function TESTransportStaffFooter(){
     $msg="
 <nav class='navbar text-light navbar-dark bg-dark'>
 <div class='container-fluid'>
@@ -136,8 +136,8 @@ return $msg;
  *
  * @return string
  */
-function QATransportStaffPageHeadDecideErrorImportHtml($head,$parent_link){
-    $msg=QATransportStaffCommonHtmlHead($head,$parent_link);
+function TESTransportStaffPageHeadDecideErrorImportHtml($head,$parent_link){
+    $msg=TESTransportStaffCommonHtmlHead($head,$parent_link);
     $msg.=PopupWidowScriptHiddenButton(false,"StaffPriorityMessage");
     $msg.=getBoostrapBlundleJsImportEnd();
 return $msg;

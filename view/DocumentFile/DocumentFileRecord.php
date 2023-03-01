@@ -15,12 +15,12 @@ $data_array=getDocumentFileSqlJudgeState($id,"document_file_id",false);
 <html lang="en">
   <head>
 <?php 
-  echo QATransportStaffCommonHtmlHead("測試財務部作業系統",true);
+  echo TESTransportStaffCommonHtmlHead("測試財務部作業系統",true);
 ?>
    </head>
   <body class="text-center">
 <?php
-  list($result,$html)=QATransportStaffHeader(true);
+  list($result,$html)=TESTransportStaffHeader(true);
   echo $html;
   if(!$result){exit;}
   $table=getDocumentFileRecordTable($id);
@@ -40,6 +40,6 @@ $data_array=getDocumentFileSqlJudgeState($id,"document_file_id",false);
   echo $table;
   ?>
 </table>
-  <?php echo QATransportStaffFooter();?>
+  <?php echo TESTransportStaffFooter();?>
 </body>
 </html>

@@ -33,7 +33,7 @@ function getEmailAddressArray(){
  * 
  * @return string
  */
-function getQATCompanySendShowName($staff_array){
+function getTESTCompanySendShowName($staff_array){
     return $staff_array["extension"]." ".ucfirst(strtolower($staff_array["ename"]))." ".ucfirst(strtolower($staff_array["elastname"]))." / QA Transport";
 }
 /**
@@ -45,7 +45,7 @@ function getQATCompanySendShowName($staff_array){
  * 
  * @return string
  */
-function getQATShowName($staff_array){
+function getTESTShowName($staff_array){
     return $staff_array["extension"]." ".ucfirst(strtolower($staff_array["ename"]))." ".ucfirst(strtolower($staff_array["elastname"]));
 }
 /**
@@ -72,7 +72,7 @@ function getStaffEnglishnameChineseNameGender($staff_array){
 function getStaffLIstTransferSendMailRecipients($buf){
     $recipients=array();
     foreach($buf as $row){
-        $array=array("email" =>$row["email"],"name"=>getQATCompanySendShowName($row));
+        $array=array("email" =>$row["email"],"name"=>getTESTCompanySendShowName($row));
         array_push($recipients,$array);
     }
     return $recipients;

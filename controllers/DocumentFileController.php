@@ -229,7 +229,7 @@ function getDocumentFileSearchTable($search_fields){
           $path=getDocumentTypeFilePath($row);
           $table.="<td><a href='".$path.$row["file"]."?".time()."' id='Trash".$row['document_file_id']."' target='_blank'>".$row["file"]."</a></td>";
         }elseif($item=="staff"){
-          $table.="<td>".getQATShowName($row)."</td>";
+          $table.="<td>".getTESTShowName($row)."</td>";
         }elseif($item=="dp_check"){
           $table.="<td>".$dp_check_array[$row[$item]]["select"]."</td>";
         }elseif($item=="pay_money"){

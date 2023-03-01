@@ -11,7 +11,7 @@ require_once("../../controllers/CommonSqlController.php");
 <html lang="en">
   <head>
   <?php 
-  echo QATransportStaffCommonHtmlHead("測試財務部作業系統",true,false);
+  echo TESTransportStaffCommonHtmlHead("測試財務部作業系統",true,false);
   ?>
   <link href="../../css/signin.css" rel="stylesheet">
   </head>
@@ -34,7 +34,7 @@ echo PopupWidowScriptHiddenButton("StaffNotLoginMessage","StaffLoginMessage");
               <form method="post" action=""class="bg-white  rounded-5 shadow-5-strong p-5">
                 <!-- Email input -->
                 <div class="mb-4">
-                  <img class="mb-4" src="../../assets/brand/qat_log.png" alt="" width="200" height="100">
+                  <img class="mb-4" src="../../assets/brand/TEST_log.png" alt="" width="200" height="100">
                   <h1 class="h3 mb-3 fw-normal">測試財務部作業系統</h1>
                 </div>
                 <div class="form-floating form-outline mb-4">

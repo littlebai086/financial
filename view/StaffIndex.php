@@ -9,18 +9,18 @@ session_start();
 <html>
 <head>
 <?php 
-	echo QATransportStaffCommonHtmlHead("測試財務系統",false);
+	echo TESTransportStaffCommonHtmlHead("測試財務系統",false);
 ?>
 </head>
 <body>
 <?php 
 	echo PopupWidowScriptHiddenButton(1);
-	list($result,$html)=QATransportStaffHeader(false);
+	list($result,$html)=TESTransportStaffHeader(false);
   	echo $html;
   	if(!$result){exit;}
 ?>
 
-<?php echo QATransportStaffFooter();?>
+<?php echo TESTransportStaffFooter();?>
 
 </body>
 </html>

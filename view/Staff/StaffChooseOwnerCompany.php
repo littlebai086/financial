@@ -8,7 +8,7 @@ require_once("../../controllers/CommonSqlController.php");
 $title="測試財務系統";
 $staff_array=getStaffListStaffId($_SESSION['staff_id']);
 if(!isset($_SESSION['staff_id'])){
-  echo QATransportStaffPageHeadDecideErrorImportHtml("測試財務系統",true);
+  echo TESTransportStaffPageHeadDecideErrorImportHtml("測試財務系統",true);
   echo PopupStaticWidowHref("測試財務系統","尚未登入","../StaffIndex.php",true,"StaffPriorityMessage");
   exit;
 }
@@ -17,7 +17,7 @@ if(!isset($_SESSION['staff_id'])){
 <html lang="en">
   <head>
   <?php 
-  echo QATransportStaffCommonHtmlHead("測試財務部作業系統",true,false);
+  echo TESTransportStaffCommonHtmlHead("測試財務部作業系統",true,false);
   ?>
   <link href="../../css/signin.css" rel="stylesheet">
   </head>
@@ -40,7 +40,7 @@ echo PopupWidowScriptHiddenButton("StaffNotLoginMessage","StaffLoginMessage");
               <form method="post" action=""class="bg-white  rounded-5 shadow-5-strong p-5">
                 <!-- Email input -->
                 <div class="mb-4">
-                  <img class="mb-4" src="../../assets/brand/qat_log.png" alt="" width="200" height="100">
+                  <img class="mb-4" src="../../assets/brand/TEST_log.png" alt="" width="200" height="100">
                   <h1 class="h3 mb-3 fw-normal">測試財務部作業系統選擇</h1>
                 </div>
                 <?php

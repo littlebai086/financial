@@ -7,9 +7,9 @@
  * @return mysqli
  */
 function getSQLLink() {
-    $db = mysqli_connect("127.0.0.1", "root", "qat-1968");
+    $db = mysqli_connect("127.0.0.1", "root", "TEST-1968");
     if (!$db) die("Error: 無法連接MySQL伺服器!" . mysqli_connect_error());
-    mysqli_select_db($db, "qat_financial") or
+    mysqli_select_db($db, "TEST_financial") or
         die("Error: 無法選擇資料庫!" . mysqli_error($db));
     mysqli_query($db, "SET NAMES utf8");
     return $db;
@@ -43,6 +43,6 @@ function getURLLink(){
     }else{
         $http="http";
     }
-    return $http."://".$_SERVER['HTTP_HOST']."/qat_logistics/";}
-    //return $http."://".$_SERVER['HTTP_HOST']."/test_qat/";}
+    return $http."://".$_SERVER['HTTP_HOST']."/TEST_logistics/";}
+    //return $http."://".$_SERVER['HTTP_HOST']."/test_TEST/";}
 ?>

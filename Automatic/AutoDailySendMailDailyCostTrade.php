@@ -59,7 +59,7 @@ list($account,$auth)=getAccountAuth();
 $buf=sqlSelectStaffListDepartmentPositionId("財務部","主管");
 //$buf=sqlSelectStaffListDepartmentPositionId("資訊部","主管");
 $recipients=getStaffLIstTransferSendMailRecipients($buf);
-if(sendMailLetter($account,$auth,$account,"[系統自動寄送]洋宏財務作業系統","【QAT洋宏財務作業系統】每日銀行交易通知",$body,false,$attach_array,$recipients,false)){
+if(sendMailLetter($account,$auth,$account,"[系統自動寄送]洋宏財務作業系統","【TEST洋宏財務作業系統】每日銀行交易通知",$body,false,$attach_array,$recipients,false)){
     echo "寄件成功";
 }else{
     echo "寄件失敗";

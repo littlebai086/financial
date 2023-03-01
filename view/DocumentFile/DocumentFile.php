@@ -20,7 +20,7 @@ if(isset($_GET['state'])){$state=$_GET['state'];}else{$state=false;}
 if(isset($_GET['document_type_id'])){$document_type_id=$_GET['document_type_id'];}else{$document_type_id=false;}
 list($result,$message)=getStaffStatePriorityReturn($state,2,$id,false);
 if(!$result){
-  echo QATransportStaffPageHeadDecideErrorImportHtml("測試財務部作業系統",true);
+  echo TESTransportStaffPageHeadDecideErrorImportHtml("測試財務部作業系統",true);
   echo PopupStaticWidowHref("測試財務部作業系統",$message,"../StaffIndex.php",true,"StaffPriorityMessage");
   exit;
 }
@@ -72,7 +72,7 @@ if(isset($_POST['emp_edit_send'])){
 <html>
 <head>
 <?php 
-  echo QATransportStaffCommonHtmlHead("測試財務部作業系統",true);
+  echo TESTransportStaffCommonHtmlHead("測試財務部作業系統",true);
 ?>
 </head>
 <script type="text/javascript" language="javascript">
@@ -122,7 +122,7 @@ $(document).ready(function(){
 </script>
 <body>
 <?php 
-  list($result,$html)=QATransportStaffHeader(true);
+  list($result,$html)=TESTransportStaffHeader(true);
   echo $html;
   if(!$result){exit;}
 
@@ -145,7 +145,7 @@ $(document).ready(function(){
   }
   ?>
 </main>
-  <?php echo QATransportStaffFooter();?>
+  <?php echo TESTransportStaffFooter();?>
 </body>
 </html>
 <?php
@@ -183,7 +183,7 @@ if(isset($_POST['emp_edit_send'])){
     if($data_array["permission"]=="jobno"){
       $body="<span style='font-family:Microsoft JhengHei;'>
       Job No : ".$data_array["document"]."上傳成功<br>
-      建檔人員 : ".getQATShowName($staff_array)."</span>";
+      建檔人員 : ".getTESTShowName($staff_array)."</span>";
       if($data_array["dp_check"]==1){
         // $buf = sqlSelectStaffListTankDepartmentCheck();
       }else{
@@ -198,7 +198,7 @@ if(isset($_POST['emp_edit_send'])){
     if ($id){
       if(getDocumentFileSqlJudgeState($id,"record",$data_array,false,"upload")){
         if(isset($recipients)){
-          if(sendMailLetter($account,$auth,$account,"[系統自動寄送]測試財務作業系統","【QAT測試財務作業系統】Job No 上傳通知",$body,false,$attach_array,$recipients,false)){
+          if(sendMailLetter($account,$auth,$account,"[系統自動寄送]測試財務作業系統","【TEST測試財務作業系統】Job No 上傳通知",$body,false,$attach_array,$recipients,false)){
             echo "寄件成功";
           }else{
             echo "寄件失敗";
@@ -225,7 +225,7 @@ if(isset($_POST['emp_edit_send'])){
   if(getDocumentFileSqlJudgeState($id,"record",$data_array,$pass,$state,$row["document_type_document_state_id"])){
     $body="<span style='font-family:Microsoft JhengHei;'>
         Job No : ".$data_array["document"]."<br>
-        建檔人員 : ".getQATShowName(getStaffListStaffId($data_array["staff_id"]))."<br>";
+        建檔人員 : ".getTESTShowName(getStaffListStaffId($data_array["staff_id"]))."<br>";
     if($pass==2){
       $body.="<font color='red'>此筆Jon No 審核不通過</font></span>";
       $buf = sqlSelectStaffListStaffId($data_array["staff_id"]);
@@ -239,7 +239,7 @@ if(isset($_POST['emp_edit_send'])){
     $cc = getStaffLIstTransferSendMailRecipients(sqlSelectStaffListStaffId($_SESSION["staff_id"]));
     $path=getDocumentTypeFilePath($data_array);
     $attach_array=array($path.$data_array["file"]);
-    if(sendMailLetter($account,$auth,$account,"[系統自動寄送]測試財務作業系統","【QAT測試財務作業系統】Job No 審核通知",$body,false,$attach_array,$recipients,false)){
+    if(sendMailLetter($account,$auth,$account,"[系統自動寄送]測試財務作業系統","【TEST測試財務作業系統】Job No 審核通知",$body,false,$attach_array,$recipients,false)){
       echo PopupWidowHref($title,"DP已審核完成","./DocumentFileList.php?document_type_id=".$data_array["document_type_id"]."&year=".$data_array["year"]."&month=".$data_array["month"],true,false);
       exit;
     }else{
@@ -261,13 +261,13 @@ if(isset($_POST['emp_edit_send'])){
     }
     $body="<span style='font-family:Microsoft JhengHei;'>
         ".$data_array["document_type"]." : ".$data_array["document"]."<br>
-        建檔人員 : ".getQATShowName(getStaffListStaffId($data_array["staff_id"]))."<br>
+        建檔人員 : ".getTESTShowName(getStaffListStaffId($data_array["staff_id"]))."<br>
         <font color='red'>此筆".$data_array["document_type"]." : ".$data_array["document"]." 已".$text."</font></span>";
     $recipients=getStaffLIstTransferSendMailRecipients(sqlSelectStaffListStaffId($data_array["staff_id"]));
     $cc = getStaffLIstTransferSendMailRecipients(sqlSelectStaffListStaffId($_SESSION["staff_id"]));
     $path=getDocumentTypeFilePath($data_array);
     $attach_array=array($path.$data_array["file"]);
-    if(sendMailLetter($account,$auth,$account,"[系統自動寄送]測試財務作業系統","【QAT測試財務作業系統】".$data_array["document_type"].$text."通知",$body,false,$attach_array,$recipients,$cc)){
+    if(sendMailLetter($account,$auth,$account,"[系統自動寄送]測試財務作業系統","【TEST測試財務作業系統】".$data_array["document_type"].$text."通知",$body,false,$attach_array,$recipients,$cc)){
       echo PopupWidowHref($title,$text."完成","./DocumentFileList.php?document_type_id=".$data_array["document_type_id"]."&year=".$data_array["year"]."&month=".$data_array["month"],true,false);
       exit;
     }else{
